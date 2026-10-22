@@ -1,5 +1,11 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [8123],
+  "portsAttributes": {
+    "8123": {
+      "label": "PORT-LABEL-TEST \u001b]0;CODESPACES-LABEL-TEST\u0007"
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
