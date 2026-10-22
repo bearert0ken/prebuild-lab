@@ -1,7 +1,6 @@
 {
-  "name": "prebuild-lab",
-  "image": "mcr.microsoft.com/devcontainers/base:latest",
-  "onCreateCommand": "bash .devcontainer/probe.sh onCreate",
-  "updateContentCommand": "bash .devcontainer/probe.sh updateContent",
-  "postCreateCommand": "bash .devcontainer/probe.sh postCreate"
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": { "version": "latest" }
+  }
 }
