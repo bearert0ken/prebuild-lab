@@ -1,4 +1,4 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y openssh-server"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y openssh-server && sudo mkdir -p /var/run/sshd && sudo /usr/sbin/sshd"
 }
