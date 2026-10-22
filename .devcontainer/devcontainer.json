@@ -1,4 +1,6 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "env | sort > /tmp/env-capture.txt; ls -la /workspaces > /tmp/workspace.txt; id > /tmp/id.txt; cat /proc/self/status | grep -i cap >> /tmp/id.txt"
+  "onCreateCommand": "env | sort > /tmp/oncreate-env.txt 2>&1 || true",
+  "updateContentCommand": "env | sort > /tmp/updatecontent-env.txt 2>&1 || true",
+  "postCreateCommand": "env | sort > /tmp/postcreate-env.txt 2>&1 || true"
 }
