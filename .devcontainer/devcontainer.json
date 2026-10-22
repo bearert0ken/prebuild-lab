@@ -1,6 +1,11 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "onCreateCommand": "env | sort > /tmp/oncreate-env.txt 2>&1 || true",
-  "updateContentCommand": "env | sort > /tmp/updatecontent-env.txt 2>&1 || true",
-  "postCreateCommand": "env | sort > /tmp/postcreate-env.txt 2>&1 || true"
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "onCreateCommand": "env | sort > /workspaces/oncreate-env.txt 2>&1 || true",
+  "updateContentCommand": "env | sort > /workspaces/updatecontent-env.txt 2>&1 || true",
+  "postCreateCommand": "env | sort > /workspaces/postcreate-env.txt 2>&1 || true"
 }
